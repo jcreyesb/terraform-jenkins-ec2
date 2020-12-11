@@ -26,6 +26,12 @@
           }
         }
       }
+     stage('test') {
+       steps {
+          sh 'terraform init'
+          sh 'terraform plan'
+        }      
+      }
 
       stage('TF Apply') {
         steps {
